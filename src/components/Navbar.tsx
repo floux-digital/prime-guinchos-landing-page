@@ -25,7 +25,7 @@ export default function Navbar() {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src="/lovable-uploads/0d588b3a-e485-4fef-8176-3fe3d83cf88f.png" alt="Prime Guinchos" className="h-10" />
+          <img src="/lovable-uploads/fcac430a-4f19-4849-966b-52b4bd4d422a.png" alt="Prime Guinchos" className="h-10" />
         </div>
         
         <div className="hidden md:flex items-center space-x-2">

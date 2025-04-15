@@ -12,7 +12,10 @@ import { useMediaQuery } from "@/hooks/use-media-query";
 export default function Testimonials() {
   const [api, setApi] = useState<any>();
   const [current, setCurrent] = useState(0);
+  
+  // Media queries for responsive design
   const isMobile = useMediaQuery("(max-width: 640px)");
+  const isTablet = useMediaQuery("(min-width: 641px) and (max-width: 1024px)");
   
   const testimonials = [
     {
@@ -31,6 +34,13 @@ export default function Testimonials() {
       description: "Super atenciosos e prestativos, resolveram meu problema rapidamente."
     }
   ];
+
+  // Calculate how many slides to show based on screen size
+  const getSlidesPerView = () => {
+    if (isMobile) return "w-full"; // 1 slide for mobile
+    if (isTablet) return "w-1/2"; // 2 slides for tablet
+    return "w-1/3"; // 3 slides for desktop
+  };
 
   useEffect(() => {
     if (!api) return;
@@ -66,7 +76,7 @@ export default function Testimonials() {
               {testimonials.map((item, index) => (
                 <CarouselItem 
                   key={index} 
-                  className={isMobile ? "w-full" : "w-1/3"}
+                  className={getSlidesPerView()}
                 >
                   <div className="bg-gray-700 bg-opacity-30 rounded-lg overflow-hidden h-full">
                     <img 
