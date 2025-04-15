@@ -35,11 +35,15 @@ export default function Testimonials() {
     }
   ];
 
-  // Calculate how many slides to show based on screen size
-  const getSlidesPerView = () => {
-    if (isMobile) return "w-full"; // 1 slide for mobile
-    if (isTablet) return "w-1/2"; // 2 slides for tablet
-    return "w-1/3"; // 3 slides for desktop
+  // Get slides per view settings for the carousel based on screen size
+  const getCarouselOptions = () => {
+    if (isMobile) {
+      return { slidesToScroll: 1, containScroll: "trimSnaps" };
+    } else if (isTablet) {
+      return { slidesToScroll: 2, containScroll: "trimSnaps" };
+    } else {
+      return { slidesToScroll: 3, containScroll: "trimSnaps" };
+    }
   };
 
   useEffect(() => {
@@ -70,13 +74,14 @@ export default function Testimonials() {
             opts={{
               align: "start",
               loop: true,
+              ...getCarouselOptions(),
             }}
           >
-            <CarouselContent>
+            <CarouselContent className="-ml-4">
               {testimonials.map((item, index) => (
                 <CarouselItem 
                   key={index} 
-                  className={getSlidesPerView()}
+                  className={`pl-4 ${isMobile ? 'basis-full' : isTablet ? 'basis-1/2' : 'basis-1/3'}`}
                 >
                   <div className="bg-gray-700 bg-opacity-30 rounded-lg overflow-hidden h-full">
                     <img 
