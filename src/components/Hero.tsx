@@ -25,7 +25,7 @@ export default function Hero() {
           </div>
           <div className="relative z-10">
             <img
-              src="/lovable-uploads/0d588b3a-e485-4fef-8176-3fe3d83cf88f.png"
+              src="/lovable-uploads/454908ae-c2e7-4217-a01c-bbb000c2d903.png"
               alt="Prime Guinchos Truck"
               className="w-full max-w-lg mx-auto"
             />

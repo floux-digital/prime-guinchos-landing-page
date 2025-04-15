@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import ServiceArea from '@/components/ServiceArea';
 import Testimonials from '@/components/Testimonials';
 import Footer from '@/components/Footer';
+import '../App.css';
 
 const Index = () => {
   useEffect(() => {
