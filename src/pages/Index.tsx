@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 import '../App.css';
 
 const Index = () => {
+  
   useEffect(() => {
     // Add Bootstrap Icons CSS
     const link = document.createElement('link');

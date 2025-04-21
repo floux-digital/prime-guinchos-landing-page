@@ -4,12 +4,12 @@ export default function Features() {
     {
       icon: 'bi bi-clock-fill',
       title: 'Disponível 24/7',
-      description: 'Atendimento 24 horas por dia, 7 dias por semana.'
+      description: 'Emergência não tem dia nem hora.'
     },
     {
       icon: 'bi bi-lightning-fill',
-      title: 'Atendimento Rápido',
-      description: 'Chegamos ao local em tempo recorde.'
+      title: 'Rápido Atendimento',
+      description: 'Entendemos a sua urgência.'
     },
     {
       icon: 'bi bi-people-fill',
@@ -23,7 +23,10 @@ export default function Features() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-center gap-4 p-4">
+            <div 
+              key={index} 
+              className={`flex items-center gap-4 p-4 ${ index < features.length - 1 ? 'sm:border-b sm:border-r-0 md:border-b-0 md:border-r border-gray-200' : ''}`}
+            >
               <div className="text-primary text-2xl">
                 <i className={feature.icon}></i>
               </div>
@@ -34,7 +37,6 @@ export default function Features() {
             </div>
           ))}
         </div>
-        <div className="mt-6 border-b border-gray-200"></div>
       </div>
     </section>
   );

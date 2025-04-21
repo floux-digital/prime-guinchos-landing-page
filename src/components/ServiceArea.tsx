@@ -1,18 +1,16 @@
 
 export default function ServiceArea() {
   const primaryAreas = [
-    'Biguaçu do Norte',
+    'Braço do Norte',
     'Grão Pará',
-    'Gravatí',
-    'Laura Muller',
+    'Gravatal',
+    'Lauro Muller',
     'Orleans',
-    'Rio Fortuna'
-  ];
-  
-  const secondaryAreas = [
-    'Elia Lorigina',
+    'Rio Fortuna',
+    'São Ludgero',
     'Tubarão'
   ];
+  
   
   const otherAreas = [
     'Paraná',
@@ -34,14 +32,6 @@ export default function ServiceArea() {
           
           <div className="flex flex-wrap justify-center gap-2">
             {primaryAreas.map((area, index) => (
-              <button key={index} className="location-button">
-                {area}
-              </button>
-            ))}
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-2 mt-4">
-            {secondaryAreas.map((area, index) => (
               <button key={index} className="location-button">
                 {area}
               </button>
