@@ -113,11 +113,11 @@ export default function Testimonials() {
   // Get slides per view settings for the carousel based on screen size
   const getCarouselOptions = () => {
     if (isMobile) {
-      return { slidesToScroll: 1, containScroll: "trimSnaps" };
+      return { slidesToScroll: 1, containScroll: "trimSnaps" as const };
     } else if (isTablet) {
-      return { slidesToScroll: 2, containScroll: "trimSnaps" };
+      return { slidesToScroll: 2, containScroll: "trimSnaps" as const };
     } else {
-      return { slidesToScroll: 3, containScroll: "trimSnaps" };
+      return { slidesToScroll: 3, containScroll: "trimSnaps" as const };
     }
   };
 
