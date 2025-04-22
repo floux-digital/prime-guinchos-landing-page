@@ -10,6 +10,8 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    strictPort: false,
+    hmr: true,
   },
   plugins: [
     react(),
@@ -34,6 +36,6 @@ export default defineConfig(({ mode }) => ({
     ssrManifest: true,
   },
   ssr: {
-    noExternal: ['react-router-dom'],
+    noExternal: ['react-router-dom', 'embla-carousel-react'],
   },
 }));

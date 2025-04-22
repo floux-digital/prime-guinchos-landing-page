@@ -9,11 +9,13 @@ export function render(url: string) {
   const queryClient = new QueryClient();
 
   const appHtml = ReactDOMServer.renderToString(
-    <QueryClientProvider client={queryClient}>
-      <StaticRouter location={url}>
-        <App />
-      </StaticRouter>
-    </QueryClientProvider>
+    <React.StrictMode>
+      <QueryClientProvider client={queryClient}>
+        <StaticRouter location={url}>
+          <App />
+        </StaticRouter>
+      </QueryClientProvider>
+    </React.StrictMode>
   );
 
   return { html: appHtml, preloadLinks: '' };

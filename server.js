@@ -15,11 +15,11 @@ async function createServer() {
   // Compress responses
   app.use(compression())
 
-  // Create Vite server in middleware mode and configure the app type as
-  // 'custom', disabling Vite's own HTML serving logic so parent server
-  // can take control
   let vite
   if (process.env.NODE_ENV !== 'production') {
+    // Create Vite server in middleware mode and configure the app type as
+    // 'custom', disabling Vite's own HTML serving logic so parent server
+    // can take control
     vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'custom'
@@ -28,11 +28,13 @@ async function createServer() {
     // Use vite's connect instance as middleware
     app.use(vite.middlewares)
   } else {
+    // Serve static assets in production
     app.use(serveStatic(resolve(__dirname, 'dist/client'), {
       index: false
     }))
   }
 
+  // Handle all routes with SSR
   app.use('*', async (req, res, next) => {
     const url = req.originalUrl
 
@@ -63,15 +65,17 @@ async function createServer() {
       if (process.env.NODE_ENV !== 'production') {
         vite.ssrFixStacktrace(e)
       }
-      console.log(e.stack)
+      console.log('SSR Error:', e.stack)
       next(e)
     }
   })
 
-  const port = process.env.PORT || 3000
+  const port = process.env.PORT || 8080 // Alterado para combinar com o porto do Vite
   app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`)
   })
 }
 
-createServer()
+createServer().catch(err => {
+  console.error('Error starting server:', err)
+})
