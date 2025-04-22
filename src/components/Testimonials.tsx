@@ -40,7 +40,7 @@ export default function Testimonials() {
     },
     {
       image: "/guinchados/guincho-santa-catarina-05.jpg",
-      title: "Preço justo e rapido",
+      title: "Vlw pelo socorro na madrugada!",
       description: ""
     },
     {
@@ -85,12 +85,12 @@ export default function Testimonials() {
     },
     {
       image: "/guinchados/guincho-santa-catarina-14.jpg",
-      title: "Me salvaram na madruga qdo ninguem atendia! Top!",
+      title: "Não eh facil guinchar meu carro, mas fizeram tudo direito! indico!",
       description: ""
     },
     {
       image: "/guinchados/guincho-santa-catarina-15.jpg",
-      title: "Confiança do início ao fim",
+      title: "Recomendo!",
       description: ""
     },
     {
@@ -135,9 +135,11 @@ export default function Testimonials() {
   }, [api]);
 
   return (
-    <section className="py-16 bg-dark-gray text-white">
+    <section className="py-32 bg-dark-gray text-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">Mais de 2 mil atendimentos</h2>
+        <h2 className="text-5xl font-bold text-center mb-4">
+          Mais de 2 mil socorros
+        </h2>
         <span className="text-2xl flex justify-center mb-4">
           <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
           <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
@@ -165,14 +167,14 @@ export default function Testimonials() {
                   key={index} 
                   className={`pl-4 ${isMobile ? 'basis-full' : isTablet ? 'basis-1/2' : 'basis-1/3'}`}
                 >
-                  <div className="bg-gray-700 bg-opacity-30 rounded-lg overflow-hidden h-full">
+                  <div className="bg-white rounded-lg overflow-hidden h-full">
                     <img 
                       src={item.image} 
                       alt={item.title} 
                       className="w-full h-96 object-cover"
                     />
                     <div className="p-4">
-                      <h3 className="font-bold mb-2 mt-1">{item.title}</h3>
+                      <h3 className="font-bold text-black mb-2 mt-1">{item.title}</h3>
                     </div>
                   </div>
                 </CarouselItem>

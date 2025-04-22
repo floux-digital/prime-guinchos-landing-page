@@ -19,9 +19,9 @@ export default function ServiceArea() {
   ];
 
   return (
-    <section id="area" className="py-16">
+    <section id="area" className="py-32">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6">Área de Serviço</h2>
+        <h2 className="text-5xl font-bold text-center mb-6">Área de Serviço</h2>
         <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
           Estamos operando na Região Sudeste de Santa Catarina, de forma expressa para várias cidades de Santa Catarina e estados vizinhos.
         </p>

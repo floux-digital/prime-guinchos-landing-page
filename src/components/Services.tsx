@@ -44,7 +44,7 @@ export default function Services() {
   return (
     <section id="services" className="py-32 border-y border-gray-200">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-4 font-[800]">Serviços</h2>
+        <h2 className="text-5xl font-bold text-center mb-4 font-[800]">Serviços</h2>
         <p className="text-center text-gray-600 mb-12 w-full lg:w-1/2 mx-auto">
           Oferecemos uma variedade de serviços para garantir que você nunca fique desamparado na estrada.
         </p>
@@ -58,7 +58,7 @@ export default function Services() {
               <h3 className="text-xl font-bold mb-2">{service.title}</h3>
               <p className="text-gray-600 text-sm flex-grow">{service.description}</p>
               <Button variant="default" size='lg' className="conversion-click border-primary text-white hover:bg-primary rounded-full mt-8" asChild>
-                <a href={`https://api.whatsapp.com/send?phone=554831792026&text=${service.message}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <a href={`https://api.whatsapp.com/send?phone=554899670035&text=${service.message}`} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                   Solicitar
                 </a>
               </Button>

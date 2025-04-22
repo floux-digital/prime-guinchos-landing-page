@@ -39,7 +39,7 @@ export default function Navbar() {
             </a>
           </Button>
           <Button size="icon" className="rounded-full conversion-click" asChild>
-            <a href="https://api.whatsapp.com/send?phone=554831792026&text=Estou%20em%20uma%20emergencia%20e%20preciso%20de%20assistencia%21" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://api.whatsapp.com/send?phone=554899670035&text=Estou%20em%20uma%20emergencia%20e%20preciso%20de%20assistencia%21" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <i className="bi bi-whatsapp text-lg"></i>
             </a>
           </Button>
