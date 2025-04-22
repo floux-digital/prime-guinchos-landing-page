@@ -12,7 +12,12 @@ export default function Hero() {
               GUINCHO <span className="text-primary">24h</span>
             </h1>
             <p className="mb-6 text-gray-700">
-              Atendimento rápido e eficiente para você não ficar na mão. Consulte nosso <span className="text-primary font-semibold">área de serviço.</span>
+              Atendimento rápido e eficiente para você não ficar na mão. Consulte nossa&nbsp; 
+              <a href="#area">
+                <span className="text-primary font-semibold">
+                  área de serviço.
+                </span>
+              </a>
             </p>
             <div className="flex flex-wrap gap-3">
               <Button className="rounded-full conversion-click" size='lg' asChild>

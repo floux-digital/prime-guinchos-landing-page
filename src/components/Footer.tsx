@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center">
-          <img src="/lovable-uploads/fcac430a-4f19-4849-966b-52b4bd4d422a.png" alt="Prime Guinchos" className="h-12 mb-4" />
+          <img src="/lovable-uploads/prime-logo.svg" alt="Prime Guinchos" className="h-12 mb-4" />
           
           <div className="mt-4 text-sm text-gray-600">
             <p>Prime Guinchos Ltda.</p>

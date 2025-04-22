@@ -19,19 +19,94 @@ export default function Testimonials() {
   
   const testimonials = [
     {
-      image: "/lovable-uploads/0d588b3a-e485-4fef-8176-3fe3d83cf88f.png",
-      title: "Rápido e Responsável",
-      description: "Prime Guinchos: Atendimento rápido, profissional e eficiente."
+      image: "/guinchados/guincho-santa-catarina-01.jpg",
+      title: "Rápido e honesto",
+      description: ""
     },
     {
-      image: "/lovable-uploads/0d588b3a-e485-4fef-8176-3fe3d83cf88f.png",
-      title: "Ótimo Serviço",
-      description: "Precisei de um guincho às 2h da manhã e eles chegaram em 20 minutos!"
+      image: "/guinchados/guincho-santa-catarina-02.jpg",
+      title: "Chegaram antes do previsto",
+      description: ""
     },
     {
-      image: "/lovable-uploads/0d588b3a-e485-4fef-8176-3fe3d83cf88f.png",
-      title: "Recomendo!",
-      description: "Super atenciosos e prestativos, resolveram meu problema rapidamente."
+      image: "/guinchados/guincho-santa-catarina-03.jpg",
+      title: "Toooop demais!!! Vlw!",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-04.jpg",
+      title: "Mto bons! Recomendo.",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-05.jpg",
+      title: "Preço justo e rapido",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-06.jpg",
+      title: "Muito antenciosos",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-07.jpg",
+      title: "Mais rápido que eu imaginava",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-08.jpg",
+      title: "Guincho top e atendimento 10",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-09.jpg",
+      title: "Obrigado pessoal, vlw demais!",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-10.jpg",
+      title: "Trataram meu carro com cuidado",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-11.jpg",
+      title: "Atendimento salvador!",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-12.jpg",
+      title: "Resolveram tudo rapidamente",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-13.jpg",
+      title: "Super indico!!!!",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-14.jpg",
+      title: "Me salvaram na madruga qdo ninguem atendia! Top!",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-15.jpg",
+      title: "Confiança do início ao fim",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-16.jpg",
+      title: "Preco e atendimento muito bons",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-17.jpg",
+      title: "Muito mais do que eu esperava",
+      description: ""
+    },
+    {
+      image: "/guinchados/guincho-santa-catarina-18.jpg",
+      title: "Recomendo de olhos fechados",
+      description: ""
     }
   ];
 
@@ -63,6 +138,13 @@ export default function Testimonials() {
     <section className="py-16 bg-dark-gray text-white">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-4">Mais de 2 mil atendimentos</h2>
+        <span className="text-2xl flex justify-center mb-4">
+          <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
+          <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
+          <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
+          <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
+          <i className="bi bi-star-fill text-yellow-400"></i>
+        </span>
         <p className="text-center mb-12 max-w-2xl mx-auto">
           Já são mais de 2 mil atendimentos emergenciais realizados pela Prime Guinchos, com muitos clientes satisfeitos e seguros.
         </p>
@@ -87,18 +169,10 @@ export default function Testimonials() {
                     <img 
                       src={item.image} 
                       alt={item.title} 
-                      className="w-full h-48 object-cover"
+                      className="w-full h-96 object-cover"
                     />
                     <div className="p-4">
-                      <p className="text-sm text-gray-300">
-                        <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
-                        <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
-                        <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
-                        <i className="bi bi-star-fill text-yellow-400 mr-1"></i>
-                        <i className="bi bi-star-fill text-yellow-400"></i>
-                      </p>
                       <h3 className="font-bold mb-2 mt-1">{item.title}</h3>
-                      <p className="text-gray-300 text-sm">{item.description}</p>
                     </div>
                   </div>
                 </CarouselItem>
