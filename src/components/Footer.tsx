@@ -9,9 +9,9 @@ export default function Footer() {
           <img src="/lovable-uploads/prime-logo.svg" alt="Prime Guinchos" className="h-12 mb-4" />
           
           <div className="mt-4 text-sm text-gray-600">
-            <p>Prime Guinchos Ltda.</p>
-            <p>CNPJ: xx.xxx.xxx/xxxx-xx</p>
-            <p>Rua João Pedro de Souza, Londrina, SC</p>
+            <p>Optimus Raster LTDA</p>
+            <p>CNPJ: 58.275.789/0001-73</p>
+            <p>Rua João Wesller, 150, Sala 202, São Ludgero, SC</p>
             <p>Tel: 0800-123-4567</p>
           </div>
         </div>
