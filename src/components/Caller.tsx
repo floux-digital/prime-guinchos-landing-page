@@ -12,7 +12,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import { Phone, PhoneCall, Smartphone, WhatsApp } from "lucide-react"
+import { Phone, PhoneCall, Smartphone, MessageSquare } from "lucide-react"
 import { ReactNode } from "react"
 
 // Define the phone contact data
@@ -94,7 +94,7 @@ export function Caller({ children }: CallerProps) {
                         size="sm"
                         onClick={() => window.open(formatWhatsAppUrl(contact.number), "_blank")}
                       >
-                        <WhatsApp className="mr-2 h-4 w-4" />
+                        <MessageSquare className="mr-2 h-4 w-4" />
                         WhatsApp
                       </Button>
                     )}
