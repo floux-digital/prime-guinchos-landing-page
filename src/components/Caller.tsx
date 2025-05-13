@@ -12,14 +12,16 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import { Phone, PhoneCall, Smartphone, MessageSquare } from "lucide-react"
+import IconPhone from "./IconPhone"
+import IconWhatsApp from "./IconWhatsapp"
+import { Phone, PhoneCall, Smartphone, MessageSquare, Icon } from "lucide-react"
 import { ReactNode } from "react"
 
 // Define the phone contact data
 const phoneContacts = [
   { 
     number: "554899670035", 
-    displayNumber: "+55 (48) 9967-0035", 
+    displayNumber: "(48) 99967 00 35", 
     hasWhatsapp: true,
     description: "Atendimento via telefone e WhatsApp"
   },
@@ -37,7 +39,7 @@ const phoneContacts = [
   },
   { 
     number: "554831972026", 
-    displayNumber: "+55 (48) 3197-2026", 
+    displayNumber: "(48) 3197 20 26", 
     hasWhatsapp: false,
     description: "Atendimento comercial"
   },
@@ -48,6 +50,7 @@ interface CallerProps {
 }
 
 export function Caller({ children }: CallerProps) {
+
   const formatWhatsAppUrl = (number: string) => {
     return `https://api.whatsapp.com/send?phone=${number}&text=Estou%20em%20uma%20emergencia%20e%20preciso%20de%20assistencia%21`;
   };
@@ -58,54 +61,68 @@ export function Caller({ children }: CallerProps) {
  
   return (
     <Drawer>
+      
       <DrawerTrigger asChild>
         {children || <Button variant="outline">Ligar Agora</Button>}
       </DrawerTrigger>
+
       <DrawerContent>
-        <div className="mx-auto w-full max-w-sm">
+        
+        <div className="mx-auto w-full max-w-sm p-[1.5rem]">
+          
           <DrawerHeader>
-            <DrawerTitle>Contatos de Emergência</DrawerTitle>
-            <DrawerDescription>Escolha uma das opções abaixo para assistência imediata</DrawerDescription>
+            <DrawerTitle className="text-center">
+              Disponíveis 24h
+            </DrawerTitle>
+            <DrawerDescription className="text-center">
+              Utilize os botões para fazer uma ligação telefônica ou enviar mensagem no WhatsApp.
+            </DrawerDescription>
           </DrawerHeader>
-          <div className="p-4 pb-0">
-            <div className="flex flex-col space-y-4">
+
+          <div className="pt-4 pb-0">
+              
               {phoneContacts.map((contact, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-4 shadow-sm">
-                  <div className="flex items-center mb-2">
-                    {contact.hasWhatsapp ? <Smartphone className="mr-2 text-primary" /> : <Phone className="mr-2 text-primary" />}
-                    <span className="font-bold">{contact.displayNumber}</span>
-                  </div>
-                  <p className="text-sm text-gray-600 mb-3">{contact.description}</p>
+              
+                <div key={index} className="flex flex-row items-center justify-between py-3 border-b">
+              
+                  
+                  <span className="font-bold">{contact.displayNumber}</span>
+                  
                   <div className="flex space-x-2">
-                    <Button 
-                      variant="outline" 
-                      className="flex-1 border-primary text-primary hover:bg-primary hover:text-white"
-                      size="sm"
-                      onClick={() => window.open(formatPhoneUrl(contact.number), "_blank")}
-                    >
-                      <PhoneCall className="mr-2 h-4 w-4" />
-                      Ligar
-                    </Button>
                     
                     {contact.hasWhatsapp && (
                       <Button 
-                        variant="outline" 
-                        className="flex-1 border-green-500 text-green-500 hover:bg-green-500 hover:text-white"
-                        size="sm"
+                        className="flex-1 rounded-full bg-green-400 hover:bg-green-500 hover:text-white"
+                        size="icon"
                         onClick={() => window.open(formatWhatsAppUrl(contact.number), "_blank")}
                       >
-                        <MessageSquare className="mr-2 h-4 w-4" />
-                        WhatsApp
+                        <IconWhatsApp fill="#FFF"/>
                       </Button>
                     )}
+
+                    <Button  
+                      className="rounded-full conversion-click"
+                      size="icon"
+                      onClick={() => window.open(formatPhoneUrl(contact.number), "_blank")}
+                    >
+                      <IconPhone fill="#FFF" />
+                    </Button>
+                    
+                    
                   </div>
                 </div>
               ))}
-            </div>
+            
           </div>
-          <DrawerFooter>
+          
+          <DrawerFooter className="px-0">
             <DrawerClose asChild>
-              <Button variant="outline">Fechar</Button>
+              <Button 
+                variant="outline" 
+                className="conversion-click border-2 font-[800] border-primary text-primary hover:bg-primary hover:text-white rounded-full"
+              >
+                  Fechar
+              </Button>
             </DrawerClose>
           </DrawerFooter>
         </div>
